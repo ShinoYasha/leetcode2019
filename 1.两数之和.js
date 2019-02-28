@@ -32,11 +32,12 @@
 var twoSum = function(nums, target) {
    let hashMap = {}
     for(let i = 0; i < nums.length; i ++) {
-        let a = target - nums[i]
-        if(hashMap[a] === undefined) {
+        // 差值
+        let minusValue = target - nums[i]
+        if(hashMap[minusValue] === undefined) {
             hashMap[nums[i]] = i
         } else {
-        return [hashMap[a], i]
+        return [hashMap[minusValue], i]
         }
    }
 };

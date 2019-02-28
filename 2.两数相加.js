@@ -38,6 +38,24 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    
+    // add为进位标识，cur为当前位值
+    let add = 0, cur = 0
+    let val1, val2
+    // 新建链表，head.next为实际返回链表
+    let head = new ListNode(0)
+    // 方便每次往链表尾端添加制
+    let tempNode = head
+    while(l1 || l2 || add) {
+        // 记录当前位值
+        val1 = l1 ? l1.val : 0
+        val2 = l2 ? l2.val : 0 
+        cur = (val1 + val2 + add) % 10
+        add = (val1 + val2 + add >= 10) ? 1 : 0
+        tempNode.next = new ListNode(cur)
+        if(l1) l1 = l1.next
+        if(l2) l2 = l2.next
+        tempNode = tempNode.next
+    }
+    return head.next
 };
 
