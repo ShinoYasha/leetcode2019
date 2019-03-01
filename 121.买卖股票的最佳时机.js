@@ -50,3 +50,8 @@ var maxProfit = function(prices) {
     return res
 };
 
+/*
+    遍历数组，用min记录当前遍历过数的最小值。
+    res记录当前值与当前最小值的差值的最大值
+*/
+

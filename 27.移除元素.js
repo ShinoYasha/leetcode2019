@@ -72,3 +72,11 @@ var removeElement = function(nums, val) {
    return count
 };
 
+/*
+在原地修改数组，对于超出数组部分不用处理
+
+一个变量i遍历数组，另一个变量count从初始位置开始对数组进行处理
+
+当传递的值与参数不同时， nums[count] = nums[i], 且count ++
+当传递的值一样时，直接继续遍历
+*/ 
