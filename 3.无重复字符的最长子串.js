@@ -55,7 +55,6 @@ var lengthOfLongestSubstring = function(s) {
     }
     return res
 };
-console.log(lengthOfLongestSubstring('pwwkew'))
 /*
     hashMap保存字符与字符所在位置的对象数组
     遍历s，如果当前字符已经存在于hashMap中，则更新字符位置。
