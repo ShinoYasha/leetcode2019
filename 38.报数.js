@@ -80,5 +80,5 @@ function count(s) {
 }
 // console.log(count('112'))
 /*
-    
+  注意最后一个字符的处理。必须再加  
 */
