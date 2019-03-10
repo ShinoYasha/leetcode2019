@@ -45,7 +45,7 @@ var generate = function(left, right, out, res) {
             generate(left-1, right, `${out}(`, res)
         }
         if(right > 0) {
-            generate(left, right-1, `${out})`, res)
+            generate(left, right-1, `${out})`, res
         }
     }
 
