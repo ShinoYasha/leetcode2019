@@ -51,3 +51,6 @@ var generate = function(left, right, out, res) {
 
 }
 
+/* 
+    试下命令
+*/
