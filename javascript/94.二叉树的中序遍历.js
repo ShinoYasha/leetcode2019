@@ -38,18 +38,40 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+// var inorderTraversal = function(root) {
+//     let res = []
+
+    
+//     inorder = (root) => {
+//         if(root != null) {
+//             inorder(root.left)
+//             res.push(root.val)
+//             inorder(root.right)
+//         }
+//     }
+//     inorder(root)
+//     return res
+// };
+
 var inorderTraversal = function(root) {
-    if(root == null) {
+    let result = []
+    if(root === null) {
         return []
     }
-    let res = []
-    if(root.left) {
-        inorderTraversal(root.left)
+    let stack = []
+    while (root != null || stack.length != 0) {
+        if(root != null) {
+            stack.push(root)
+            root = root.left
+        } else {
+            if(stack.length === 0) {
+                return result
+            }
+            root = stack.pop()
+            result.push(root.val)
+            root = root.right
+        }
     }
-    res.push(root.val)
-    if(root.right) {
-        inorderTraversal(root.right)
-    }
-    return res
-};
+    return result
+}
 
