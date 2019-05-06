@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}/47.全排列-ii.js"
+            "program": "${workspaceFolder}/109.有序链表转换二叉搜索树.js"
         }
     ]
 }
