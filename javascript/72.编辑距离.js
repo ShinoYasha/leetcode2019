@@ -1,12 +1,22 @@
+/*
+ * @lc app=leetcode.cn id=72 lang=javascript
+ *
+ * [72] 编辑距离
+ */
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {number}
+ */
 var minDistance = function(word1, word2) {
   let x = word1.length;
   let y = word2.length;
-  let resArr = []
+  let resArr = [];
   if (x === 0 || y === 0) {
     return Math.max(x, y);
   }
-  for(let i = 0; i <= x; i ++) {
-      resArr.push([])
+  for (let i = 0; i <= x; i++) {
+    resArr.push([]);
   }
   for (let i = 0; i <= x; i++) {
     resArr[i][0] = i;
@@ -28,5 +38,6 @@ var minDistance = function(word1, word2) {
   return resArr[x][y];
 };
 
-
-console.log(minDistance('intention', 'execution'))
+```
+开始构造数组的时候用的new Array(x).fill(new Array(y))。所有数组都是同一个数组的引用。。坑
+```
